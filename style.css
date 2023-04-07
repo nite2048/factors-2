@@ -1,0 +1,76 @@
+:root{
+    --primary-color: black;
+    --secondary-color: aquamarine;
+
+    font-size: 8px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: var(--primary-color);
+
+    height: 100svh;
+    width: 100svw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+
+    width: 100svw;
+
+    margin-bottom: 1rem;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 1rem 1rem;
+    gap: 1rem;
+
+    border: 0.35rem rgba(127, 255, 212, 30%) solid;
+    border-radius: 3rem;
+}
+
+
+.click{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+
+    padding: 13px 17px;
+    font-size: 2rem;
+
+    border: 0.35rem black solid;
+    border-radius: 2rem;
+
+    transition-duration: 0.5s;
+}
+
+.click:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.click:active{
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+
+    background-color: white;
+
+    transition-duration: 0s;
+}
