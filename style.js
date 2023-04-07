@@ -1,4 +1,4 @@
-const collection = document.getElementsByClassName("click");
+let collection = document.getElementsByClassName("click");
 const media_query = window.matchMedia("(min-width: 576px)");
 
 media_query.addListener(handle_device_change);
@@ -19,9 +19,10 @@ function reset() {
 
 function handle_device_change(query) {
     if (!query.matches) {
-        collection[2].innerHTML = "LCM";
-        collection[3].innerHTML = "HCF";
+        collection.item(2).innerHTML = "LCM";
+        collection.item(3).innerHTML = "HCF";
     }
 }
+
 
 handle_device_change(media_query);
