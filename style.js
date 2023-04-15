@@ -18,6 +18,10 @@ function handle_device_change(query) {
         small_screen_device = false
     }
 
+    if(small_screen_device){
+        collection[1].remove();
+    }
+
     on_click(0)
 }
 
@@ -29,7 +33,6 @@ function on_mouse_enter(index) {
         collection[index].style.transitionDuration = "0.5s";
 
         if (document.body.getAttribute('data-state') !== index.toString()) {
-            console.log(document.body.getAttribute('state'))
             collection[index].style.backgroundColor = "white"
             collection[index].style.color = "black"
         }
