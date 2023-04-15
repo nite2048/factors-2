@@ -1,4 +1,4 @@
-const collection = document.getElementsByClassName("tab")
+let collection = document.getElementsByClassName("tab")
 const media_query = window.matchMedia("(min-width: 576px)")
 
 let small_screen_device
@@ -16,7 +16,8 @@ function handle_device_change(query) {
     }
 
     if(small_screen_device){
-        collection[1].remove();
+        collection[1].style.display = "none"
+        collection.splice(1, 1);
     }
 
     on_click(0)
@@ -48,8 +49,10 @@ function on_mouse_leave(index) {
 }
 
 function on_click(index) {
-    collection[index].style.transitionDuration = "0s";
+    if (!small_screen_device){
+        collection[index].style.transitionDuration = "0s";
 
+    }
     document.body.setAttribute('data-state', `${index}`)
 
     for (let i = 0; i < collection.length; i++) {
