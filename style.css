@@ -15,40 +15,26 @@ body{
     height: 100svh;
     width: 100svw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     margin: 0;
     padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+td{
+    color: var(--tertiary-color);
 }
 
 
 nav{
     display: flex;
     justify-content: center;
-    align-self: flex-end;
 
     width: 100svw;
-
     margin-bottom: 1rem;
 }
-
-#container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 0.1rem;
-
-    width: fit-content;
-
-    border: 0.1rem white solid;
-    border-radius: 2rem;
-
-    z-index: 2;
-}
-
 
 .tab{
     color: var(--secondary-color);
@@ -63,5 +49,61 @@ nav{
     transition-duration: 0.5s;
 }
 
+#tabs{
+    display: flex;
+    justify-content: center;
+
+    gap: 0.1rem;
+
+    width: fit-content;
+    height: 100%;
+
+    border: 0.1rem white solid;
+    border-radius: 2rem;
+
+    z-index: 2;
+}
+
+#calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.click{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+
+    padding: 13px 17px;
+    font-size: 2rem;
+
+    border: 0.35rem black solid;
+    border-radius: 2rem;
+
+    transition-duration: 0.5s;
+}
+
+.click:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.click:active{
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+
+    background-color: white;
+
+    transition-duration: 0s;
+}
 
 
