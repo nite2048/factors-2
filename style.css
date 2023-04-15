@@ -1,6 +1,7 @@
 :root{
     --primary-color: black;
     --secondary-color: aquamarine;
+    --tertiary-color: white;
 
     font-size: 8px;
 
@@ -38,39 +39,29 @@ nav{
     justify-content: center;
     align-items: center;
 
+    gap: 0.1rem;
+
     width: fit-content;
 
-    padding: 1rem 1rem;
-    gap: 1rem;
+    border: 0.1rem white solid;
+    border-radius: 2rem;
 
-    border: 0.35rem rgba(127, 255, 212, 30%) solid;
-    border-radius: 3rem;
+    z-index: 2;
 }
 
 
-.click{
+.tab{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 
     padding: 13px 17px;
     font-size: 2rem;
 
-    border: 0.35rem black solid;
+    border: 0.2rem black solid;
     border-radius: 2rem;
 
     transition-duration: 0.5s;
 }
 
-.click:hover{
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-}
 
-.click:active{
-    color: var(--secondary-color);
-    border-color: var(--primary-color);
 
-    background-color: white;
-
-    transition-duration: 0s;
-}
