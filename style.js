@@ -1,4 +1,4 @@
-let collection = document.getElementsByClassName("tab")
+let tabs = document.getElementsByClassName("tab")
 const media_query = window.matchMedia("(min-width: 576px)")
 
 let small_screen_device
@@ -7,21 +7,21 @@ media_query.addListener(handle_device_change)
 
 function handle_device_change(query) {
     if (!query.matches) {
-        collection.item(2).innerHTML = "LCM"
-        collection.item(3).innerHTML = "HCF"
+        tabs.item(2).innerHTML = "LCM"
+        tabs.item(3).innerHTML = "HCF"
         
         small_screen_device = true
     }else{
-        collection.item(2).innerHTML = "Lowest Common Multiples"
-        collection.item(3).innerHTML = "Highest Common Factors"
+        tabs.item(2).innerHTML = "Lowest Common Multiples"
+        tabs.item(3).innerHTML = "Highest Common Factors"
 
         small_screen_device = false
     }
 
     if(small_screen_device){
-        collection[1].style.display = "none"
+        tabs[1].style.display = "none"
     }else{
-        collection[1].style.display = "block"
+        tabs[1].style.display = "block"
     }
 
     on_click(0)
@@ -33,8 +33,8 @@ handle_device_change(media_query)
 function on_mouse_enter(index) {
     if(!small_screen_device){
         if (document.body.getAttribute('data-state') !== index.toString()) {
-            collection[index].style.backgroundColor = "white"
-            collection[index].style.color = "aquamarine"
+            tabs[index].style.backgroundColor = "white"
+            tabs[index].style.color = "aquamarine"
         }
     }
 }
@@ -42,8 +42,8 @@ function on_mouse_enter(index) {
 function on_mouse_leave(index) {
     if(!small_screen_device) {
         if (document.body.getAttribute('data-state') !== index.toString()) {
-            collection[index].style.backgroundColor = "black"
-            collection[index].style.color = "aquamarine"
+            tabs[index].style.backgroundColor = "black"
+            tabs[index].style.color = "aquamarine"
         }
     }
 }
@@ -51,11 +51,11 @@ function on_mouse_leave(index) {
 function on_click(index) {
     document.body.setAttribute('data-state', `${index}`)
 
-    for (let i = 0; i < collection.length; i++) {
-        collection[i].style.backgroundColor = "black"
-        collection[i].style.color = "aquamarine"
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.backgroundColor = "black"
+        tabs[i].style.color = "aquamarine"
     }
 
-    collection[index].style.backgroundColor = "aquamarine"
-    collection[index].style.color = "black"
+    tabs[index].style.backgroundColor = "aquamarine"
+    tabs[index].style.color = "black"
 }
