@@ -12,12 +12,16 @@ function handle_device_change(query) {
         
         small_screen_device = true
     }else{
+        collection.item(2).innerHTML = "Lowest Common Multiples"
+        collection.item(3).innerHTML = "Highest Common Factors"
+
         small_screen_device = false
     }
 
     if(small_screen_device){
         collection[1].style.display = "none"
-        collection.splice(1, 1);
+    }else{
+        collection[1].style.display = "block"
     }
 
     on_click(0)
@@ -28,19 +32,15 @@ handle_device_change(media_query)
 
 function on_mouse_enter(index) {
     if(!small_screen_device){
-        collection[index].style.transitionDuration = "0.5s";
-
         if (document.body.getAttribute('data-state') !== index.toString()) {
             collection[index].style.backgroundColor = "white"
-            collection[index].style.color = "black"
+            collection[index].style.color = "aquamarine"
         }
     }
 }
 
 function on_mouse_leave(index) {
     if(!small_screen_device) {
-        collection[index].style.transitionDuration = "0.5s";
-
         if (document.body.getAttribute('data-state') !== index.toString()) {
             collection[index].style.backgroundColor = "black"
             collection[index].style.color = "aquamarine"
@@ -49,10 +49,6 @@ function on_mouse_leave(index) {
 }
 
 function on_click(index) {
-    if (!small_screen_device){
-        collection[index].style.transitionDuration = "0s";
-
-    }
     document.body.setAttribute('data-state', `${index}`)
 
     for (let i = 0; i < collection.length; i++) {

@@ -21,6 +21,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+body > *{
+    margin-top: auto;
 }
 
 td{
@@ -46,7 +50,7 @@ nav{
     border: 0.2rem black solid;
     border-radius: 2rem;
 
-    transition-duration: 0.5s;
+    transition-duration: 0.6s;
 }
 
 #tabs{
@@ -62,21 +66,6 @@ nav{
     border-radius: 2rem;
 
     z-index: 2;
-}
-
-#calculator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 100%;
-}
-
-#input{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .click{
@@ -104,6 +93,12 @@ nav{
     background-color: white;
 
     transition-duration: 0s;
+}
+
+.un-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
