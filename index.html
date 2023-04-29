@@ -9,10 +9,9 @@
         <link rel="stylesheet" href="style.css">
         <script src="style.js"></script>
     </head>
+
     <body data-state="0" onload="handle_device_change(media_query)">
-
-        <div class="click un-select">Click</div>
-
+        <div ontouchstart="on_mouse_enter(1)" class="click un-select">Click</div>
         <nav>
             <button class="tab un-select" onmouseleave="on_mouse_leave(0)" onmouseover="on_mouse_enter(0)" onclick="on_click(0)"> Factors </button>
             <button class="tab un-select" onmouseleave="on_mouse_leave(1)" onmouseover="on_mouse_enter(1)" onclick="on_click(1)"> Prime Factors </button>
