@@ -1,5 +1,5 @@
 let tabs = document.getElementsByClassName("tab")
-const media_query = window.matchMedia("(min-width: 576px)")
+const media_query = window.matchMedia("(min-width: 668px)")
 
 let small_screen_device
 
@@ -7,11 +7,13 @@ media_query.addListener(handle_device_change)
 
 function handle_device_change(query) {
     if (!query.matches) {
+        tabs.item(0).innerHTML = "FACTORS"
         tabs.item(2).innerHTML = "LCM"
         tabs.item(3).innerHTML = "HCF"
-        
+
         small_screen_device = true
     }else{
+        tabs.item(0).innerHTML = "Factors"
         tabs.item(2).innerHTML = "Lowest Common Multiples"
         tabs.item(3).innerHTML = "Highest Common Factors"
 
