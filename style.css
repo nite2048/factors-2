@@ -1,13 +1,22 @@
+*{
+    font-family: "Agency FB", serif;
+
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+}
+
 :root{
     --primary-color: black;
     --secondary-color: aquamarine;
     --tertiary-color: white;
 
-    font-size: 8px;
+    font-size: 9px;
 
     margin: 0;
     padding: 0;
+
 }
+
 
 body{
     background-color: var(--primary-color);
@@ -23,9 +32,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-body > *{
-    margin-top: auto;
-}
+
 
 td{
     color: var(--tertiary-color);
@@ -52,6 +59,27 @@ nav{
 
     transition-duration: 0.6s;
 }
+#content{
+    width: 100%;
+
+    display: flex;
+    flex: 1;
+
+    margin-bottom: 1rem;
+}
+
+#left, #right{
+    width: 50%;
+    height: 100%;
+}
+
+#left{
+    background-color: cadetblue;
+}
+#right{
+    background-color: mediumaquamarine;
+}
+
 
 #tabs{
     display: flex;
@@ -95,13 +123,13 @@ nav{
     transition-duration: 0s;
 }
 
-.un-select {
+.no-select {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 668px) {
     .click:hover{
         color: var(--secondary-color);
         background-color: var(--primary-color);
