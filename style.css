@@ -123,7 +123,7 @@ nav{
     transition-duration: 0s;
 }
 
-.no-select {
+.select {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -133,7 +133,14 @@ nav{
 
     *{
         letter-spacing: 0;
-        font-size: 7px;
+    }
+
+    .tab{
+        font-size: 1rem;
+    }
+
+    .click{
+        font-size: 1rem;
     }
 
     .click:hover{
