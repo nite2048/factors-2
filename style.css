@@ -133,7 +133,9 @@ nav{
 
     *{
         letter-spacing: 0;
-        font-size: 7px;
+    }
+    .tab{
+        font-size: 1.5rem;
     }
 
     .click:hover{
