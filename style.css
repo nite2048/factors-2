@@ -104,6 +104,8 @@ nav{
 #heading{
     animation: pan 3s linear infinite;
 
+    transition-duration: 1s;
+
     font-size: 6rem;
     color: var(--tertiary-color);
 
@@ -181,13 +183,13 @@ nav{
     }
 }
 
-.no-select {
+*{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 763px) {
     :root{
         font-size: 8px;
     }

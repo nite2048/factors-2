@@ -1,5 +1,5 @@
 let tabs = document.getElementsByClassName("tab")
-const media_query = window.matchMedia("(min-width: 668px)")
+const media_query = window.matchMedia("(min-width: 763px)")
 
 let small_screen_device
 
@@ -28,7 +28,7 @@ function handle_device_change(query) {
 
     on_click(0)
 
-    setInterval(() => {const element = document.getElementById("load"); element.remove()}, 2500);
+    setInterval(() => {document.getElementById("load").remove()}, 2500);
 }
 
 handle_device_change(media_query)
@@ -63,5 +63,11 @@ function on_click(index) {
     tabs[index].style.backgroundColor = "aquamarine"
     tabs[index].style.color = "black"
 
-    document.getElementById("heading").innerHTML = tabs[index].innerHTML + " Calculator"
+
+    if(small_screen_device != true) {
+        document.getElementById("heading").innerHTML = tabs[index].innerHTML + " Calculator"
+    }else{
+        let string = tabs[index].innerHTML.charAt(0).toUpperCase() + tabs[index].innerHTML.toLowerCase().slice(1) + " Calculator"
+        document.getElementById("heading").innerHTML = string
+    }
 }
