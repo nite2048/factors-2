@@ -62,4 +62,6 @@ function on_click(index) {
 
     tabs[index].style.backgroundColor = "aquamarine"
     tabs[index].style.color = "black"
+
+    document.getElementById("heading").innerHTML = tabs[index].innerHTML + " Calculator"
 }
