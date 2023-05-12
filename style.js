@@ -35,8 +35,8 @@ handle_device_change(media_query)
 function on_mouse_enter(index) {
     if(!small_screen_device){
         if (document.body.getAttribute('data-state') !== index.toString()) {
-            tabs[index].style.backgroundColor = "white"
-            tabs[index].style.color = "aquamarine"
+            tabs[index].style.backgroundColor = "rgb(93, 63, 211)"
+            tabs[index].style.color = "white"
         }
     }
 }

@@ -7,6 +7,7 @@
     --primary-color: black;
     --secondary-color: aquamarine;
     --tertiary-color: white;
+    --quaternary-color: #C576F6;
 
     font-size: 9px;
 
@@ -49,7 +50,7 @@ nav{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 
-    padding: 14px 17px;
+    padding: 13px 15px;
     font-size: 2.15rem;
 
     border: 0.2rem black solid;
@@ -88,11 +89,21 @@ nav{
 }
 
 #heading{
+    animation: pan 5s linear infinite;
+
     font-size: 6rem;
     color: var(--tertiary-color);
 
     margin-left: 2rem;
     margin-top: 1rem;
+
+    background: linear-gradient(to right, var(--secondary-color), var(--quaternary-color),  var(--secondary-color));
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+
 }
 
 #tabs{
@@ -104,7 +115,7 @@ nav{
     width: fit-content;
     height: 100%;
 
-    border: 0.1rem white solid;
+    border: 0.1rem var(--tertiary-color) solid;
     border-radius: 2rem;
 
     z-index: 2;
@@ -135,6 +146,16 @@ nav{
     background-color: white;
 
     transition-duration: 0s;
+}
+
+@keyframes pan {
+    from{
+        background-position: 0% center;
+    }
+
+    to{
+        background-position: -200% center;
+    }
 }
 
 .no-select {
