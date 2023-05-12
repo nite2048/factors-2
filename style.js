@@ -28,7 +28,7 @@ function handle_device_change(query) {
 
     on_click(0)
 
-    setInterval(() => {const element = document.getElementById("load"); element.remove()}, 2000);
+    setInterval(() => {const element = document.getElementById("load"); element.remove()}, 2500);
 }
 
 handle_device_change(media_query)
