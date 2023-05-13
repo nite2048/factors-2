@@ -7,15 +7,15 @@ media_query.addListener(handle_device_change)
 
 function handle_device_change(query) {
     if (!query.matches) {
-        tabs.item(0).innerHTML = "FACTORS"
+        tabs.item(0).innerHTML = "FACTOR"
         tabs.item(2).innerHTML = "LCM"
         tabs.item(3).innerHTML = "HCF"
 
         small_screen_device = true
     }else{
-        tabs.item(0).innerHTML = "Factors"
-        tabs.item(2).innerHTML = "Lowest Common Multiples"
-        tabs.item(3).innerHTML = "Highest Common Factors"
+        tabs.item(0).innerHTML = "Factor"
+        tabs.item(2).innerHTML = "Lowest Common Multiple"
+        tabs.item(3).innerHTML = "Highest Common Factor"
 
         small_screen_device = false
     }

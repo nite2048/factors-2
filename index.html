@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="style.js"></script>
     </head>
 
@@ -29,10 +30,12 @@
         </div>
 
         <nav>
-            <button class="tab" onmouseleave="on_mouse_leave(0)" onmouseover="on_mouse_enter(0)" onclick="on_click(0)"> Factors </button>
-            <button class="tab" onmouseleave="on_mouse_leave(1)" onmouseover="on_mouse_enter(1)" onclick="on_click(1)"> Prime Factors </button>
+            <button class="tab" onmouseleave="on_mouse_leave(0)" onmouseover="on_mouse_enter(0)" onclick="on_click(0)"> Factor </button>
+            <button class="tab" onmouseleave="on_mouse_leave(1)" onmouseover="on_mouse_enter(1)" onclick="on_click(1)"> Prime Factor </button>
             <button class="tab" onmouseleave="on_mouse_leave(2)" onmouseover="on_mouse_enter(2)" onclick="on_click(2)"> Lowest Common Multiples </button>
-            <button class="tab" onmouseleave="on_mouse_leave(3)" onmouseover="on_mouse_enter(3)" onclick="on_click(3)"> Highest Common Factors </button>
+            <button class="tab" onmouseleave="on_mouse_leave(3)" onmouseover="on_mouse_enter(3)" onclick="on_click(3)" style="z-index: 3"> Highest Common Factors </button>
+            <button id="settings"> <i class="fa fa-solid fa-gear fa-rotate-by fa-2xl"></i>
+            </button>
         </nav>
     </body>
 </html>
