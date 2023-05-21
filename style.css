@@ -8,6 +8,7 @@
     --secondary-color: aquamarine;
     --tertiary-color: white;
     --quaternary-color: #C576F6;
+    --quinary-color: rgb(93, 63, 211);
 
     font-size: 9px;
 
@@ -90,19 +91,21 @@ nav{
     text-align: center;
 }
 
-#top{
-    display: flex;
-    height: 15%
-
-}
-
 #body > *{
     height: 100%;
     width: 50%;
 }
 
+#top{
+    display: flex;
+    height: 15%;
+
+    justify-content: center;
+    align-items: center;
+}
+
 #heading{
-    animation: pan 3s linear infinite;
+    animation: pan 6s linear infinite;
 
     transition-duration: 1s;
 
@@ -119,6 +122,48 @@ nav{
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
 
+}
+
+.menu-items{
+    height: fit-content;
+    width: fit-content;
+
+    border-radius: 2rem;
+
+    animation: pan 6s linear infinite;
+    background: linear-gradient(to left, var(--quaternary-color), var(--quinary-color), var(--quinary-color),  var(--quaternary-color));
+    background-size: 200%;
+}
+
+.menu-items-button{
+    background-color: var(--primary-color);
+    color: rgba(0,0,0,0%);
+
+    height: 6.5rem;
+    width: 6.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 2rem;
+
+    transition-duration: 0.6s;
+
+    margin: 0.2rem;
+}
+
+.menu-items-button-text{
+    animation: pan 6s reverse infinite;
+    background: linear-gradient(to left, var(--quinary-color), var(--quaternary-color), var(--quaternary-color), var(--quinary-color));
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+
+    transition-duration: 0.2s;
 }
 
 #tabs{
@@ -163,37 +208,6 @@ nav{
     transition-duration: 0s;
 }
 
-#settings{
-    background-color: var(--primary-color);
-
-    border: 0.35rem black solid;
-    border-radius: 2rem;
-
-    transition-duration: 0.5s;
-
-    margin-left: 3rem;
-    font-size: 4rem;
-
-    padding: 7px 8px;
-
-    margin: 2px;
-    color: var(--quaternary-color);
-
-    transition:  0.6s ease-out;
-}
-#settings:hover{
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-
-   rotate: z 90deg;
-}
-
-#settings:active{
-    color: var(--primary-color);
-    transition-duration: 0s;
-    rotate: z 90deg;
-}
-
 @keyframes pan {
     from{
         background-position: 0 center;
@@ -203,6 +217,7 @@ nav{
         background-position: -200% center;
     }
 }
+
 
 @keyframes load {
     0%{
@@ -225,30 +240,24 @@ nav{
         font-size: 8px;
     }
 
-    #settings:hover{
-        color: var(--quaternary-color);
-        rotate: z 0deg;
+    .menu-items{
+        display: none;
     }
 
-    #settings:active{
-        color: var(--secondary-color);
-        rotate: z 180deg;
+    .menu-items-button{
+        display: none;
     }
 
-    #settings{
-        margin-left: 2rem;
-        rotate: z 0deg;
-    }
-
-    #top{
-        justify-content: center;
-        align-items: center;
+    .menu-items-button-text{
+        display: none;
     }
 
     #heading{
         font-size: 5rem;
         margin-left: 0;
         margin-top: 1.5rem;
+
+        text-align: center;
     }
 
     .tab{

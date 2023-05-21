@@ -18,24 +18,26 @@
 
         <div id="content">
             <div id="top">
-                <span id="heading">
+                <span style="flex: 1" id="heading">
                     Factors Calculator
                 </span>
+                <div style="margin: 1rem 1rem 0 0" class="menu-items">
+                    <div class="menu-items-button">
+                        <i  class="fa fa-4x fa-solid fa-gear menu-items-button-text"></i>
+                    </div>
+                </div>
             </div>
             <div id="body">
 <!--                <div style="background-color: #C576F6"></div>-->
 <!--                <div style="background-color: aquamarine;"></div>-->
             </div>
-
         </div>
 
         <nav>
             <button class="tab" onmouseleave="on_mouse_leave(0)" onmouseover="on_mouse_enter(0)" onclick="on_click(0)"> Factor </button>
             <button class="tab" onmouseleave="on_mouse_leave(1)" onmouseover="on_mouse_enter(1)" onclick="on_click(1)"> Prime Factor </button>
             <button class="tab" onmouseleave="on_mouse_leave(2)" onmouseover="on_mouse_enter(2)" onclick="on_click(2)"> Lowest Common Multiples </button>
-            <button class="tab" onmouseleave="on_mouse_leave(3)" onmouseover="on_mouse_enter(3)" onclick="on_click(3)" style="z-index: 3"> Highest Common Factors </button>
-            <button id="settings"> <i class="fa fa-solid fa-gear fa-rotate-by fa-2xl"></i>
-            </button>
+            <button class="tab" onmouseleave="on_mouse_leave(3)" onmouseover="on_mouse_enter(3)" onclick="on_click(3)"> Highest Common Factors </button>
         </nav>
     </body>
 </html>
