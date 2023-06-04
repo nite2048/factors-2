@@ -49,11 +49,20 @@
                     <div class="row">
                         <button class="click" onclick = 'add_digits(9)'>9</button>
                         <button class="click" onclick = 'add_digits(0)'>0</button>
-                        <button style="color: var(--primary-color); pointer-events: none;" class="click"></button>
-                        <button style="color: var(--quaternary-color)" class="click"><i style="rotate: z 45deg" class="fa-solid fa-plus fa"></i></button>
+                        <button onclick="remove_digit()" style="font-size: 2rem; color: var(--quaternary-color)" class="click"><i style="rotate: z 45deg" class="fa-solid fa-plus fa"></i></button>
+                        <button style="font-size: 2rem; color: var(--tertiary-color)" class="click" onclick = 'remove_all_numbers()'><i class="fa fa-solid fa-check"></i></button>
                     </div>
                 </div>
-                <div id="controls" style="background-color: aquamarine;"></div>
+                <div id="controls">
+
+                    <div>
+                        <p id="info">In number theory, integer factorization is the decomposition, when possible, of a positive integer into a product of smaller integers</p>
+                    </div>
+
+                    <button class="click" onclick = 'add_numbers()'><i style="margin-right: 2rem" class="fa-solid fa-plus fa"></i>Add a new number</button>
+                    <button class="click" onclick = 'remove_number()'><i style="margin-right: 2rem" class="fa fa-solid fa-ban"></i> Remove a number</button>
+                    <button class="click" onclick = 'remove_all_numbers()'><i style="margin-right: 2rem" class="fa fa-light fa-trash"></i> Remove all numbers</button>
+                </div>
             </div>
         </div>
 
