@@ -1,6 +1,8 @@
 let tabs = document.getElementsByClassName("tab")
 const media_query = window.matchMedia("(min-width: 763px)")
 
+let once = true
+
 let small_screen_device
 
 media_query.addListener(handle_device_change)
@@ -28,7 +30,13 @@ function handle_device_change(query) {
 
     on_click(0)
 
-    setInterval(() => {document.getElementById("load").remove()}, 2500);
+    if (once) {
+        setInterval(() => {
+            document.getElementById("load").style.display = "none"
+        }, 2500);
+
+        once = false
+    }
 }
 
 handle_device_change(media_query)

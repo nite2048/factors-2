@@ -17,7 +17,6 @@
 
 }
 
-
 body{
     background-color: var(--primary-color);
 
@@ -181,12 +180,65 @@ nav{
     z-index: 2;
 }
 
-.click{
+#calculator{
+    gap: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#display{
+    font-family: "Neuton", serif;
+
     color: var(--secondary-color);
     background-color: var(--primary-color);
 
-    padding: 13px 17px;
-    font-size: 2rem;
+    width: 83%;
+    padding: 1.5rem;
+
+    font-size: 4rem;
+
+    border: 0.35rem white solid;
+    border-radius: 2rem;
+}
+
+input::selection{
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 20%);
+}
+#display:focus{
+    border: 0.35rem black solid;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.row:last-child > .click:last-child:active > i{
+    color: aquamarine;
+}
+
+
+.click{
+    font-family: "Neuton", serif;
+
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+    font-size: 3rem;
 
     border: 0.35rem black solid;
     border-radius: 2rem;
@@ -236,6 +288,16 @@ nav{
 }
 
 @media only screen and (max-width: 763px) {
+
+
+    #controls{
+        display: none;
+    }
+
+    #calculator{
+        width: 100%;
+    }
+
     :root{
         font-size: 8px;
     }
