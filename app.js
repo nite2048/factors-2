@@ -25,11 +25,11 @@ function remove_all_numbers() {
 }
 
 function show_factors() {
-    let element =  document.getElementById('display')
+    let element =  document.getElementById('output')
     element.textContent = find_factors(convert_to_number(numbers[numbers.length - 1]))
 }
 function show_prime_factors() {
-    let element =  document.getElementById('display')
+    let element =  document.getElementById('output')
     element.textContent = find_prime_factors(convert_to_number(numbers[numbers.length - 1]))
 }
 function show_lowest_common_factor() {
@@ -39,7 +39,7 @@ function show_lowest_common_factor() {
         lcm.push(convert_to_number(numbers[i]))
     }
 
-    let element =  document.getElementById('display')
+    let element =  document.getElementById('output')
     element.textContent =  find_lowest_common_factor(lcm)
 }
 function show_highest_common_factor() {
@@ -49,7 +49,7 @@ function show_highest_common_factor() {
         hcf.push(convert_to_number(numbers[i]))
     }
 
-    let element =  document.getElementById('display')
+    let element =  document.getElementById('output')
     element.textContent =  find_highest_common_factor(hcf)
 }
 
@@ -84,27 +84,5 @@ function convert_to_number(array) {
 }
 
 function buttons_control() {
-    // let factors =  document.getElementById('factors')
-    // let prime_factors =  document.getElementById('prime_factors')
-    // let lowest_common_factor =  document.getElementById('lowest_common_factor')
-    // let highest_common_factor =  document.getElementById('highest_common_factor')
-    //
-    // if (numbers.length > 1){
-    //     factors.disabled = true
-    //     prime_factors.disabled = true
-    //     lowest_common_factor.disabled = false
-    //     highest_common_factor.disabled = false
-    // }else {
-    //     factors.disabled = false
-    //     prime_factors.disabled = false
-    //     lowest_common_factor.disabled = true
-    //     highest_common_factor.disabled = true
-    // }
-    // if (numbers.length == 0){
-    //     factors.disabled = true
-    //     prime_factors.disabled = true
-    //     lowest_common_factor.disabled = true
-    //     highest_common_factor.disabled = true
-    //     highest_common_factor.disabled = true
-    // }
+    buttons()
 }

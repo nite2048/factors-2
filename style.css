@@ -189,6 +189,13 @@ nav{
     flex-direction: column;
 }
 
+#output{
+    color: white;
+    font-size: 3rem;
+
+    margin-bottom: 8rem;
+}
+
 #display{
     font-family: "Neuton", serif;
 
@@ -289,6 +296,20 @@ input::selection{
     color: var(--tertiary-color);
     font-size: 2.5rem;
     padding: 1rem;
+}
+
+#dialog{
+    height: 40vh;
+    width: 40vw;
+
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    border: 1rem var(--tertiary-color);
+}
+
+#dialog::backdrop{
+    background-color: rgba(255 ,255, 255, 60%);
+    filter: blur(10rem);
 }
 
 
